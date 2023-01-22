@@ -55,4 +55,59 @@ I will periodically update this as the semester continues.
     - `break` utilizing a label attached to a loop
     - `continue` utilizing a label attached to a loop
     
+### [3. Arrays of primitive types](03_arrays_of_primitive_types.md)
 
+- Array Definition
+- Indexing into an array
+- Array Declaration and initialization
+- Default Values
+- Array Allocation
+- Multi-Dimensional Arrays
+- Jagged Arrays
+- Other primitive type arrays
+
+### [4. Strings](04_strings.md)
+
+- What is a Class?
+- Bicycle class example
+- Java `String` class
+- Class vs. Objects / Instances
+- Constructors
+- Methods
+- Method overloading
+- String concatenation
+- `StringBuilder` and `StringBuffer`
+- Strings are immutable
+
+### [5. Reading Files](05_reading_files.md)
+
+- Files Types 
+	- Binary vs Text files
+- The `File` class
+	- `exists()` 
+	- `getName()`
+	- `getPath()`
+	- `canRead()`
+	- `canWrite()`
+	- `createNewFile()`
+	- `delete()`
+	- `length()`
+- File IO (Reading a text file)
+	- The `BufferedReader` class
+	- The `InputStreamReader` class
+	- The `FileInputStream` class
+	- importing classes from the `java.io` package
+	- The `FileNotFoundException`
+	- The `BufferedReader` `readLine()` method
+	- `try-catch` block vs `try-with-resources` block
+		- need to explictly `close()` in in a traditional `try-catch`
+		- `try-with-resources` implicitly closes for us.
+- Alternate approaches to read a text file: The `Scanner` class
+
+- Parsing Text
+	- `StringTokenizer`
+		- `hasMoreTokens()`
+		- `nextToken()`
+		- `countTokens()`
+	- `String` `split()` method
+	- Example `ReadTextFileAndParseTokensExample.java`
