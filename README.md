@@ -1,6 +1,6 @@
 # Lecture Notes
 
-Lecture Notes for the Fall 2022 semester.
+Lecture Notes for the Spring 2023 semester.
 
 ## Table of Contents
 
@@ -21,14 +21,14 @@ I will periodically update this as the semester continues.
 ### [1. Primitive Data Types](01_primitive_data_types.md)
 
 - Java Primitives
-  - `btye` / `short` / `int` / `long` / `float` / `double` / `boolean` / `char`
+  - `byte` / `short` / `int` / `long` / `float` / `double` / `boolean` / `char`
 - common usage
 - integer values can be initialized with different bases
     - decimal (base 10) / hexadecimal (base 16) / octal (base 8) / binary (base 2)
 - improved readability for large numeric literals
     - e.g. long x = 10_000_100;
 - Wrapper classes
-    - `Btye` / `Short` / `Integer` / `Long` / `Float` / `Double` / `Boolean` / `Character`
+    - `Byte` / `Short` / `Integer` / `Long` / `Float` / `Double` / `Boolean` / `Character`
     - each wrapper class has various methods to operate on the wrapped primitive type
     - wrappers are immutable
 - Integer wrapper class's methods

@@ -53,5 +53,5 @@ clone the same repository you use in Lab. You can repeat the instructions from L
 ## Github
 
 - TODO If you do not have a GitHub account, go to <a href="https://github.com/" target="blank">Github</a> and sign up.
-Once you have signed up for an account, fill out and submit this <a href="https://forms.gle/HcQtq4iVFDVi5HDQ8" target="blank">Google Form</a> so we can get identify you in GitHub classroom.
+Once you have signed up for an account, fill out and submit this <a href="https://forms.gle/nmQLykMJvxpaqDix9" target="blank">Google Form</a> so we can get identify you in GitHub classroom.
 
