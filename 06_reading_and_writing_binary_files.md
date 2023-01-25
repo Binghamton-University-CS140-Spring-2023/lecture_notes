@@ -1,0 +1,60 @@
+**Reading and writing binary files**
+- Classes of interest
+  - `FileInputStream`
+    - Reads bytes from a file
+    - Can construct with a `File` object or a `String` filename
+  - `FileOutputStream`
+    - writes bytes to a file
+    - Can construct with a `File` object or a `String` filename
+    - Can open to *append* to an existing file
+  - `BufferedInputStream`
+    - Adds a buffer to an input stream
+  - `BufferedOutputStream`
+    - Adds a buffer to an output stream
+**Reading binary files**
+- `FileInputStream`
+  - Use either the `File file` constructor or the `String filename` constructor to create
+  - Example
+     - `java.io.FileInputStream input = new java.io.FileInputStream(args[0]);`
+     - where `args[0]` is the filename from the command-line
+  - Once you have the `FileInputStream`
+     - Read single byte
+     - Read multiple bytes into a byte array
+     - Skip over multiple bytes of the input
+  - Reading a single byte at a time is quite slow
+  - Creating a `byte` array buffer to store multiple bytes at a time is significantly more time efficient
+- `BufferedInputStream`
+  - Use either the `InputStream` constructor or the `InputStream, buffer size` constructor to create
+     - `FileInputStream` is an `InputStream`, so the following works
+     - `java.io.BufferedInputStream input = `<br/>&nbsp;`new java.io.BufferedInputStream(new java.io.FileInputStream(args[0]));`
+     - `java.io.BufferedInputStream input = `<br/>&nbsp;`new java.io.BufferedInputStream(new java.io.FileInputStream(args[0]), bufferSize);`
+     - where `args[0]` is a filename and bufferSize is an `int`
+  - Once you have the `BufferedInputStream`
+       - Read single byte
+       - Read multiple bytes into a byte array
+       - Skip over multiple bytes of the input
+  - Reading a single byte at a time is still slower than reading multiple bytes at a time into an array, but the `BufferedInputStream` is still much faster than `FileInputStream` reading a single byte at a time
+**Writing binary files**
+- `FileOutputStream`
+  - Use either the `File file` constructor or the `String filename` to create
+    - Can also include an optional `boolean` if you want to *append* to an existing file
+  - Example
+     - `java.io.FileOutputStream input = `<br/>&nbsp;`new java.io.FileOutputStream(args[0]);`
+     - `java.io.FileOutputStream input = `<br/>&nbsp;`new java.io.FileOutputStream(args[0], true);`
+     - where `args[0]` is filename and `true` says to *append* to the file
+  - Once you have the `FileOutputStream`
+     - Write  single byte
+     - Write multiple bytes into a byte array
+  - Writing a single byte at a time is quite slow
+  - Creating a byte array buffer to write multiple bytes at a time is significantly more time efficient
+- `BufferedOutputStream`
+  - Use either the `OutputStream` constructor or the `OutputStream, buffer size` constructor to create
+      - `FileOutputStream` is an `OutputStream`
+  - Example
+      - `java.io.BufferedOutputStream output = `<br/>&nbsp;`new java.io.BufferedOutputStream(new java.io.FileOutputStream(args[2]));`
+      - `java.io.BufferedOutputStream output = `<br/>&nbsp;`new java.io.BufferedOutputStream(new java.io.FileOutputStream(args[2]), bufferSize);`
+      - where `args[2]` is the filename to write to and bufferSize is the size of the buffer to use
+  - Once you have the `BufferedOutputStream`
+      - Write single byte
+      - Write multiple bytes from a byte array
+  - Writing a single byte at a time is still slower than writing multiple bytes at a time from an array, but the` BufferedOutputStream` is still much faster than `FileOutputStream` writing a single byte at a time 

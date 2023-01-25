@@ -1,0 +1,7 @@
+horse cow pig sheep dog cat dolphin whale
+frog salamander iguana
+ant beetle grasshopper cricket millipede centipede
+robin crow hawk eagle cowbird chicken turkey
+salmon trout bass cod tuna haddock catfish
+
+
