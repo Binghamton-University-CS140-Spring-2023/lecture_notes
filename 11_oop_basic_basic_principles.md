@@ -424,7 +424,7 @@ class EnhancedBankAccount extends BankAccount
 		return new ArrayList<Transaction>();
 	}
 	
-	private ArrayList<Transaction> getTransactions(String transactionType)
+	private ArrayList<Transaction> getTransactions(TransactionType transactionType)
 	{
 		return new ArrayList<Transaction>();
 	}
@@ -471,11 +471,11 @@ class EnhancedBankAccount extends BankAccount
 ``` java
 class Transaction
 {
-	final private String type;
+	final private TransactionType type;
 	final private java.util.Date date;
 	final private double amount;
 	
-	Transaction(String type, java.util.Date date, double amount)
+	Transaction(TransactionType type, java.util.Date date, double amount)
 	{
 		this.type = type;
 		this.date = date;
@@ -492,14 +492,14 @@ class Transaction
 		return amount;
 	}
 	
-	public String getType()
+	public TransactionType getType()
 	{
 		return type;
 	}
 	
 	public String toString()
 	{
-		return type + " " + date.toString() + " " + amount;
+		return type.name() + " " + date.toString() + " " + amount;
 	}
 }
 ```
