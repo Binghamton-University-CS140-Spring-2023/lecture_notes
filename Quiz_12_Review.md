@@ -61,7 +61,7 @@ class Datum_Packet
 }
 ```
 
-We wish to send this over a network, an want to do so using a byte array. On the other side, when received, the byte array sent will be converted back into a 
+We wish to send this over a network, and want to do so using a byte array. On the other side, when received, the byte array sent will be converted back into a 
 `Datum_Packet` on the receiver's side.
 
 A. How big must our byte buffer be to store all the data held within our `Datum_Packet`, as is, without getting too fancy with optimizations?
@@ -69,3 +69,23 @@ A. How big must our byte buffer be to store all the data held within our `Datum_
 B. Write code that the sender would utilize to convert a given `Datum_Packet` into a byte array. Use a `ByteBuffer` to assist this conversion.
 C. Write code that the receiver would utilize to convert a received byte array into a corresponding `Datum_Packet`. Use a `ByteBuffer` to assist this conversion.
 
+## Exception Handling
+
+Suppose we are given the following input string, and have the following data structure available to capture a limited amount of the input:
+
+``` java
+String input = "11x,12y,13,14,cat,15,16,17,18,19";
+static int[] array = new int[4];
+
+```
+
+Utilizing a `StringTokenizer`, try to write some code to break up the input into each integer, which we note are comma delimited.
+
+Attempt to handle error checking along the way, consider the following three exceptions at a minimum:
+
+1. `NumberFormatException` - if encountered, move on to the next token
+2. `NoSuchElementException` - if encountered, print that something went wrong with the scanner
+3. `ArrayIndexOutOfBoundsException` - if encountered, there is no more space in the array to capture input. However, we should print a message to indicate this to the user.
+3. `Exception` - if encountered, print a generic exception message
+
+Print out the resulting array when the parsing is done.
