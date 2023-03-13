@@ -1,6 +1,6 @@
 # Lecture Notes
 
-Lecture Notes for the Fall 2022 semester.
+Lecture Notes for the Spring 2023 semester.
 
 ## Table of Contents
 
