@@ -1,4 +1,3 @@
-package thread;
 class TestThread {
     public static void main(String[] args) {
         if(args.length < 2) {

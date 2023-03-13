@@ -1,4 +1,4 @@
-package thread;
+//package thread;
 import java.util.concurrent.Semaphore;
 class SimpleSharedClassSemaphore implements SimpleSharedClassFunctions {
     private int delayInMilliSeconds;
