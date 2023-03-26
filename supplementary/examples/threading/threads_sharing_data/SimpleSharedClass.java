@@ -1,4 +1,4 @@
-package thread;
+//package thread;
 class SimpleSharedClass implements SimpleSharedClassFunctions {
     private int delayInMilliSeconds;
     private int delayInNanoSeconds;

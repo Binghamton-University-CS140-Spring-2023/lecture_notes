@@ -1,4 +1,4 @@
-package thread;
+//package thread;
 import java.util.concurrent.locks.ReentrantLock;
 class SimpleSharedClassLock implements SimpleSharedClassFunctions {
     private int delayInMilliSeconds;

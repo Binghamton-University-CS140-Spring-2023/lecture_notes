@@ -1,4 +1,4 @@
-package thread;
+//package thread;
 class SimpleSharedClassProcessor extends Thread {
     private final SimpleSharedClassFunctions simpleSharedClass;
     SimpleSharedClassProcessor(SimpleSharedClassFunctions simpleSharedClass) {

@@ -1,4 +1,3 @@
-package thread;
 class PrintToScreenRunnable implements Runnable {
     private String name;
     private int delay;

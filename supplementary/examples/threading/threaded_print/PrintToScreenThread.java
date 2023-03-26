@@ -1,4 +1,4 @@
-package thread;
+
 class PrintToScreenThread extends Thread {
     private String name;
     private int delay;
