@@ -1,0 +1,23 @@
+## Exam 01 Topics
+
+- fields
+- field access modifiers
+- final fields
+- final methods
+- static and instance fields
+- static and instance methods
+- ArrayDeque (queue and stack functionality)
+- interfaces
+- the equality operator "==" and comparing objects via the equals() method
+- ByteBuffer
+- arrays
+- ArrayList
+- connected and strongly connected graphs
+- TreeSet
+- HashSet
+- super & sub classes
+- StringTokenizer & parsing text
+- JUnit test
+- method signatures
+- automatic conversion of parameters
+- recursive functions
