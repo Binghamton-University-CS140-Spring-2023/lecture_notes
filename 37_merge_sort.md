@@ -82,12 +82,12 @@ void BottomUpMergeSort(int[] origArray)
 			// merge subarrays X and Y, where:
 				//X = origArray[i:min(i+width, origArray.length)-1] and
 				//Y = origArray[min(i+width, origArray.length):min(i+(2*width), origArray.length)-1]
-			int end_idx_sub_array_X = min(i+width, origArray.length);
-			int end_idx_sub_array_Y = min(i+(2*width), origArray.length);
+			int end_idx_left_sub_array  = min(i+width, origArray.length);
+			int end_idx_right_sub_array = min(i+(2*width), origArray.length);
 
 			//Note - we are dividing origArray into two adjacent, already sorted subarrays and have
 			//bottomUpMerge merge them into a single contiguous sorted subarray
-			bottomUpMerge(origArray, i, end_idx_sub_array_X, end_idx_sub_array_Y, workArray);
+			bottomUpMerge(origArray, i, end_idx_left_sub_array, end_idx_right_sub_array, workArray);
 		}
 		
 		//PSEUDO - Use copyArray to copy workArray to origArray
