@@ -50,7 +50,6 @@ Let's dive in.
 ## [Control Flow](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/02_flow_control.md)
 
 - do while, while, for loops
-- find A and B such that the sum is equal to some value
 
 ## [Iterators](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/32_iterators.md)
 
@@ -208,7 +207,7 @@ Let's dive in.
 1. What does the following code do?
 
 ``` java
-	public static ArrayList<String> do_while_example()
+	public static java.util.ArrayList<String> do_while_example()
 	{
 		java.util.ArrayList<String> ret = new java.util.ArrayList<>();
 
@@ -216,9 +215,12 @@ Let's dive in.
 		String user_input = "";
 		do
 		{
+			System.out.print("user input: ");
 			user_input = keyboard.nextLine();
 			ret.add(user_input);
 		}while(user_input != "");
+
+		ret.remove(ret.size() - 1);
 
 		return ret;
 	}
@@ -230,29 +232,101 @@ Let's dive in.
 ``` java
 	public static void gcd_euclid(int A, int B)
 	{
-		int r = 1;
+		int gcd = Math.max(A,B);
+		int r 	= Math.min(A,B); 
 
 		while(r != 0)
 		{
+			gcd = r;
+
 			int larger  = Math.max(A,B);
 			int smaller = Math.min(A,B);
 
 			int q 	= larger / smaller;
-			r 		= larger - (q * smaller)
+			r 		= larger - (q * smaller);
 
-			System.out.println(larger + " = " + q + "(" + smaller + ") + " r);
+			System.out.println(larger + " = " + q + "(" + smaller + ") + " + r);
+
 			A = smaller;
 			B = r;
 		}
+
+		System.out.println("Conclusion: The gcd is: " + gcd);
 	}
 ```
 
-- Whats the output, given A = 49, B = 21?
-- What's the output of two relatively prime numbers, for instance A = 35, B = 6?
-- **Aside:** This was just a fun example leveraging a while loop. However,do you see a case that would break the code as is here?
+- What's the output, given A and B are multiples of one another?
+	- Consider: A = 21, B = 7
+	- Consider: A = 5, B = 45 
+- What's the output, given A and B have common factors in their prime factorizations?
+	- Consider: A = 49, B = 21
+- What's the output of two relatively prime numbers?
+	- Consider: A = 35, B = 6
+- What's the output, given A or B is 0?
+	- Consider: A = 41, B = 0
 
-3.
-4.
+3. What's the output?
+
+``` java
+	public static void for_example()
+	{
+		int[] vals = new int[]{0,1,2,3,4,5,6,7,8,9,10,11,2,13,14,15,16,17,18,19,20};
+
+		for(int i = 1; i < vals.length; i *= 2)
+		{
+			System.out.println("vals[" + i + "] = " + vals[i]);
+		}
+	} 
+```
+
+4. Print out the `String[]` passed to this function, utilizing:
+	- tradition for loop, enhanced for loop, an iterator
+
+``` java
+public static void iteration_example(String[] strArray)
+{
+	//TODO - print all values via a traditional for loop.
+
+	//TODO - print all values via an enhanced for loop.
+
+	//TODO - print all values via an iterator.
+}
+```
+
+5. What is the time complexity of the following function?
+
+``` java
+
+public static void func1(int[] arr)
+{
+	int sum = 0;
+
+	for(int i = 0; i < arr.length; ++i)
+	{
+		sum += arr[i];
+	}
+
+	int product = 1;
+
+	for(int j = 0; j < arr.length; ++j)
+	{
+		product *= arr[i];
+	}
+
+	System.out.println("sum: " + sum);
+	System.out.println("product: " + product);
+}
+``` 
+
+6. What is the time complexity of the following function?
+
+``` java
+public static void func2(int[] arr)
+{
+	
+}
+```
+
 5.
 6.
 7.
