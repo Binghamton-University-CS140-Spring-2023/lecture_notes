@@ -15,7 +15,7 @@ Let's dive in.
 
 ## [Object Oriented Programming](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/11_oop_basic_basic_principles.md)
 	
-- [OOP is a programming paradigm]((https://stackify.com/oops-concepts-in-java/)
+- [OOP is a programming paradigm](https://stackify.com/oops-concepts-in-java/)
 	- Other paradigms include Procedural Programming and Functional Programming
 	- You'll spend time juxtaposing these paradigms in programming languages
 - Class vs instance
