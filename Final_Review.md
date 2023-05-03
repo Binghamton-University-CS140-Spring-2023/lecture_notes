@@ -177,16 +177,16 @@ Let's dive in.
 		- what happens if we call `start()` vs calling `run()`? 
 - What are the benefits you can get from threading?
 	- What is [concurency](https://docs.oracle.com/cd/E19253-01/816-5137/mtintro-25092/index.html#:~:text=Concurrency%20indicates%20that%20more%20than,might%20appear%20to%20run%20simultaneously.)?
-	- [Thread Scheduling](https://www.iitk.ac.in/esc101/05Aug/tutorial/essential/threads/priority.html#:~:text=The%20execution%20of%20multiple%20threads,defined%20in%20the%20Thread%20class).)
+	- [Thread Scheduling](https://www.iitk.ac.in/esc101/05Aug/tutorial/essential/threads/priority.html#:~:text=The%20execution%20of%20multiple%20threads,defined%20in%20the%20Thread%20class)
 - What are some of the issues you can run into with threading?
 	- What is a shared resource in the context of threading?
 	- What is a critical section?
 	- What is a race condition, and **how can we avoid them in java**?
-		- Semaphores 
+		- [Semaphores](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/24_multi_threaded_applications.md#1-utilizing-sempaphores) 
 			- `aquire()` and `release()`
 			- threads that can aquire a semaphore are dictated by the number of `permits`
-		- `synchronized` keyword
-		- ReentrantLock 
+		- [`synchronized` keyword](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/24_multi_threaded_applications.md#2-utilizing-synchronized-methods)
+		- [ReentrantLock](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/24_multi_threaded_applications.md#3-utilizing-reentrant-locks) 
 			- `lock()` and `unlock()`
 			- mutually exclusive
 	- What is [deadlock](https://www.developer.com/java/java-prevent-thread-deadlock/#:~:text=Deadlock%20can%20be%20avoided%20by,lock%20on%20the%20same%20resource.), and how can we avoid it?
