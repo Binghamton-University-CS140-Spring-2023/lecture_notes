@@ -167,7 +167,7 @@ Let's dive in.
 	- Briefly discuss in the context of the scheduler of yours Operating System on the CPU
 - Describe how threading can be leveraged in Java
 	- `Thread` class and `Runnable` interface
-	- Explain the relevance and compare and contrast the following methods in a threading context:
+	- Explain the relevance and compare and contrast [the following methods](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/24_multi_threaded_applications.md#some-methods-in-the-thread-class) in a threading context:
 		- `start()`
 		- `run()`
 		- `sleep()`
