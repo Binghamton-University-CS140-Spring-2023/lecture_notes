@@ -11,7 +11,14 @@ Final Review
 
 # Review topics
 
-Let's dive in.
+Let's dive in. 
+
+## Previous Quiz Material
+
+- Definitely recommend reviewing previous quizzes as well.
+
+- [Quiz 1 and 2 review](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/Quiz_12_Review.md)
+- [Quiz 3 and 4 review](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/quiz_3_4_review.md)
 
 ## [Object Oriented Programming](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/11_oop_basic_basic_principles.md)
 	
@@ -30,6 +37,10 @@ Let's dive in.
 	- method overloading
 
 ## Primitive Types
+
+- You have seen that these topics are semi related. 
+- Be sure you know the byte size of primitive types
+- Review quiz questions involving ByteBuffer.
 
 - [byte sizes](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/01_primitive_data_types.md)
 - [ByteBuffer](https://github.com/Binghamton-University-CS140-Spring-2023/lecture_notes/blob/main/07_more_on_reading_and_writing_files.md#reading-and-writing-data-from-a-byte-array)
@@ -191,3 +202,75 @@ Let's dive in.
 			- mutually exclusive
 	- What is [deadlock](https://www.developer.com/java/java-prevent-thread-deadlock/#:~:text=Deadlock%20can%20be%20avoided%20by,lock%20on%20the%20same%20resource.), and how can we avoid it?
 	- What is an [atomic instruction](https://docs.oracle.com/javase/tutorial/essential/concurrency/atomic.html)?
+
+# Review Questions
+
+1. What does the following code do?
+
+``` java
+	public static ArrayList<String> do_while_example()
+	{
+		java.util.ArrayList<String> ret = new java.util.ArrayList<>();
+
+		java.util.Scanner keyboard = new java.util.Scanner(System.in);
+		String user_input = "";
+		do
+		{
+			user_input = keyboard.nextLine();
+			ret.add(user_input);
+		}while(user_input != "");
+
+		return ret;
+	}
+```
+
+2. The following is an implementation of [euclidean's algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm). 
+
+
+``` java
+	public static void gcd_euclid(int A, int B)
+	{
+		int r = 1;
+
+		while(r != 0)
+		{
+			int larger  = Math.max(A,B);
+			int smaller = Math.min(A,B);
+
+			int q 	= larger / smaller;
+			r 		= larger - (q * smaller)
+
+			System.out.println(larger + " = " + q + "(" + smaller + ") + " r);
+			A = smaller;
+			B = r;
+		}
+	}
+```
+
+- Whats the output, given A = 49, B = 21?
+- What's the output of two relatively prime numbers, for instance A = 35, B = 6?
+- **Aside:** This was just a fun example leveraging a while loop. However,do you see a case that would break the code as is here?
+
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
