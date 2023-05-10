@@ -204,6 +204,8 @@ Let's dive in.
 
 # Review Questions
 
+## Control Flow
+
 1. What does the following code do?
 
 ``` java
@@ -279,6 +281,8 @@ Let's dive in.
 	} 
 ```
 
+## Iteration
+
 4. Print out the `String[]` passed to this function, utilizing:
 	- tradition for loop, enhanced for loop, an iterator
 
@@ -292,6 +296,8 @@ public static void iteration_example(String[] strArray)
 	//TODO - print all values via an iterator.
 }
 ```
+
+## Big Oh Notation
 
 5. What is the time complexity of the following function?
 
@@ -323,28 +329,387 @@ public static void func1(int[] arr)
 ``` java
 public static void func2(int[] arr)
 {
-	
+	for(int i = 0; i < arr.length; i *= 2)
+	{
+		for(int j = 0; j < arr.length; ++j)
+		{
+			System.out.println(arr[j]);
+		}
+	}
 }
 ```
 
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-20.
-21.
-22.
-23.
-24.
-25.
+7. What is the time complexity of the following function?
+
+``` java
+public static void func3(int[] arr)
+{
+	for(int i = 0; i < arr.length; ++i)
+	{
+		for(int j = 0; j < arr.length; ++j)
+		{
+			System.out.println(arr[i] + arr[j]);
+		}
+	}
+}
+```
+
+8. What is the time complexity of the following function?
+
+```java
+public static void func4(int[] arr1, int[] arr2)
+{
+	int N = arr1.length;
+	int M = arr2.length;
+
+	for(int i = 0; i < N; ++i)
+	{
+		System.out.println(arr1[i]);
+	}
+
+	for(int j = 0; j < M; ++j)
+	{
+		System.out.println(arr2[j]);		
+	}
+}
+```
+
+9. What is the time complexity of the following function?
+
+```java
+public static void func5(int[] arr1, int[] arr2)
+{
+	int N = arr1.length;
+	int M = arr2.length;
+
+	for(int i = 0; i < N; i *= 2)
+	{
+		for(int j = 0; j < M; ++j)
+		{
+			System.out.println(i + " "  + j);
+		}
+	}
+}
+```
+
+## Data Structures
+
+10. Suppose you want to design a game, where we dynamically decide where each character lies on the leader board.  The players are placed on the board according to the following criteria:  
+	- Whoever has the most overall points is in the lead.
+	- If there is a tie, whoever has the most characters in their party leads.
+	- If there is still a tie, whoever has the most money leads.
+	- If there is still a tie, whoever has a user name that comes first alphabetically leads.
+
+What data structure(s) would you utilize to be able to easily keep track of the leader board as the game progresses? Note that there could be multiple acceptable answers here.
+
+Give a high level design describing how you would implement this logic.
+
+11. Suppose you want to represent the files and subdirectories that reside within your operating system, starting at your Desktop directory. What data structure would you utilize to do this?  
+
+12. Suppose you want to represent all the possible routes you could take to go from one point in a town to another. What data structure would you utilize to accomplish this?
+
+13. Suppose you are given a task, where you are parsing XML data. The XML data looks something like so:
+
+```
+<XML>
+	<CLASS>
+		<NAME>Person</NAME>
+		<FIELD>
+			<AccessModifier>private</AccessModifier>
+			<TYPE>String</TYPE>
+			<NAME>firstName</NAME>
+		</FIELD>
+		<FIELD>
+			<AccessModifier>private</AccessModifier>
+			<TYPE>String</TYPE>
+			<NAME>lastName</NAME>
+		</FIELD>
+		<FIELD>
+			<AccessModifier>private</AccessModifier>
+			<TYPE>int</TYPE>
+			<NAME>age</NAME>
+		</FIELD>
+
+		<GETTER_METHOD>
+			<AccessModifier>public</AccessModifier>
+			<ReturnType>String</ReturnType>
+			<NAME>getFirst</NAME>
+			<Returned_Field>fistName</Returned_Field>
+		</GETTER_METHOD>
+		<SETTER_METHOD>
+			<AccessModifier>public</AccessModifier>
+			<ReturnType>void</ReturnType>
+			<NAME>setAge</NAME>
+			<PARAM>
+				<TYPE>int</TYPE>
+				<NAME>newAge</NAME>
+			</PARAM>
+			<Set_Field>age</Set_Field>
+		</SETTER_METHOD>
+	</CLASS>
+</XML>
+```
+
+And we would want to write some code, such that we auto generate the following java file:
+
+```java
+class Person
+{
+	private String firstName;
+	private String lastName;
+	private int age;
+
+	public String getFirst()
+	{
+		return lastName;
+	}
+
+	public void setAge(int newAge)
+	{
+		age = setAge;
+	}
+}
+```
+
+When writing the code, note here that The XML tags can mean different things depending on the context. For example, <AccessModifier>  is a tag which could be associated with a Field or a Method. Likewise, <NAME> and <TYPE> are tags that could be associated with parameters, fields, or methods.
+
+In order to properly process the XML and the nested nature of it, what data structure would you utilize here? 
+
+**Note:** When you are done processing say a <FIELD> </FIELD> area, we need to know that we are still within a class here. Describe how the chosen data structure would change when you are changing contexts being considered parsing the XML here. 
+
+
+14. Suppose you want to design an app that keeps track of a bunch of user names, and for each user, keeps track of their:
+	- phone number
+	- their address
+	- their email address
+	- the company they work for
+
+What data structure would you utilize to represent this data?
+
+15. Suppose you are given a task where you are given a roster of all the clubs at binghamton university. From that data, you want to know how many unique students are in all of the clubs collectively in total.
+
+What data structure could you utilize to make this task simple?
+
+16. Suppose are designing a simple traffic handler for a website. When multiple users request access to information related to the website, let's suppose for the sake of simplicity that you can only honor the requests one at a time. 
+
+We probably want to honor the user's that made their request first, since they would have been waiting the longest as more requests come in.
+
+What data structure could you utilize to make sure all the user requests are handled in the order they have been receieved? 
+
+## Inhertiance
+
+17. Suppose the following code is provided:
+
+```java
+class A
+{
+	public int binaryOperator(int x, int y)
+	{
+		return x + y;
+	}
+}
+
+class B extends A 
+{
+	public int binaryOperator(int x, int y)
+	{
+		return super.binaryOperator(2*x - y, y);
+	}
+}
+
+class C extends B 
+{
+	public int binaryOperator(int x, int y)
+	{
+		return super.binaryOperator(x, 1) * super.binaryOperator(y, 2);
+	}
+}
+```
+
+What is the output of the following:
+
+```java
+
+public static void main(String[] args)
+{
+	A a = new A();
+	B b = new B();
+	C c = new C();
+
+	ArrayList<A> objects = new ArrayList<>();
+	objects.add(a);
+	objects.add(b);
+	objects.add(c);
+
+	for(A obj ; objects)
+	{
+		System.out.println(obj instanceof Object);
+		System.out.println(obj instanceof A);
+		System.out.println(obj instanceof B);
+		System.out.println(obj instanceof C);
+		System.out.println(obj.binaryOperator(4,5));
+		System.out.println("----------------------");
+	}
+}
+```
+
+## Java Passes Variables by Value
+
+18. What is the output of the following code?
+
+```java
+class Book
+{
+	private String title;
+	private String authorName;
+	private int pages;
+
+	public Book(String title, String authorName, int pages)
+	{
+		this.title = title;
+		this.authorName = authorName;
+		this.pages = pages;
+	}
+
+	public void setTitle(String title)
+	{
+		this.title = title;
+	}
+
+	public void setAuthorName(String authorName)
+	{
+		this.authorName = authorName;
+	}
+
+	public void setPages(int pages)
+	{
+		this.pages = pages;
+	}
+
+	public String toString()
+	{
+		return title + " (" + pages + ") - " + authorName;
+	}
+}
+
+class Driver
+{
+	public static void modifier(java.util.ArrayList<Book> library, Book b, int x, int y)
+	{
+		library.add(b);
+		library.add(b);
+		library.add(b);
+
+		b.setTitle("Moby Dick");
+		b.setAuthorName("Herman Melville");
+		b.setPages(427); 
+
+		b = new Book("A Tale of Two Cities", "Charles Dickens", 448);
+
+		x = x + y;
+		y = x - 2*y;
+	}
+
+	public static void main(String[] args)
+	{
+		java.util.ArrayList<Book> library = new java.util.ArrayList<>();
+		Book b = new Book("Harry Potter and the Goblet of Fire", "J.K. Rowling", 600);
+		int x = 3;
+		int y = 7;
+
+		modifier(library, b, x, y);
+
+		System.out.println("library: " + library);
+		System.out.println("Book:    " + b);
+		System.out.println("x:       " + x);
+		System.out.println("y:       " + y);
+	}
+}
+```
+
+## Comparisons in Java
+
+19. Given the following class, implement the TODOs correctly.
+
+
+``` java
+class Dog
+{
+	private String name;
+	private String breed;
+	private int age;
+	private double weight_lbs;
+
+	public Dog(String name, String breed, int age, double weight_lbs)
+	{
+		this.name = name;
+		this.breed = breed;
+		this.age = age;
+		this.weight_lbs = weight_lbs;
+	}
+
+	public String toString()
+	{
+		return "(" + name + "," + age + "," + weight_lbs + ")";
+ 	}
+
+ 	public boolean equals(Object other)
+ 	{
+ 		//TODO - other object should only be considered equal if is
+ 		//non-null, a Dog object, and has the same name, breed, age, and weight.
+ 		return false;
+ 	}
+}
+
+class DogComparator implements Compare<Dog>
+{
+	public int compare(Dog d1, Dog d2)
+	{
+		//TODO 
+		//older dogs should be considered greater than younger dogs
+		//if they are the same age, heavier dogs should be considered greater than lighter dogs
+		//if they are the same age and weight, breeds should be compared lexicographically
+		//if they are the same age, weight, and breed, names should be compared lexicographically.
+		//if two dogs have the same age, weight, breed, and name, they should be considered equal
+		return 0;
+	}
+}
+
+class DogDriver
+{
+	public static void main(String[] args)
+	{
+		java.util.PriorityQueue<Dog> pq = new PriorityQueue<>(new DogComparator());
+
+		pq.add(new Dog("Zeus", "Pug", 3, 20.2));
+		pq.add(new Dog("Micah", "Chihuahua", 4, 6.3));
+		pq.add(new Dog("Chewbacca", "Shihi Tzu", 5, 7.2));
+		pq.add(new Dog("Bell", "Golden Retriever", 3, 30.1));
+		pq.add(new Dog("Zeus", "Pug", 3, 20.2));
+
+		while(!pq.isEmpty())
+		{
+			System.out.println(pq.poll());
+		}
+	}
+}
+```
+
+## Streams
+
+Suppose we re
+20. What is the output?
+
+```java
+List<String> strList = Arrays.asList("abc", "", "bcd", "", "defg", "jk");
+long count = strList.stream() .filter(x -> x.isEmpty()) .count();
+System.out.println(count);
+```
+
+21. What is the output?
+
+```java
+List<Int> intList = Arrays.asList("abc", "", "bcd", "", "defg", "jk");
+long count = strList.stream() .filter(x -> x.isEmpty()) .count();
+System.out.println(count);
+```
