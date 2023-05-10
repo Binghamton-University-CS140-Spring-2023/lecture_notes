@@ -6,6 +6,11 @@ Final Review
 
 - **Reminder:** Final will be held ***Thursday, May 11th, 12:50 pm - 2:50 pm***
 	- The final will be online.
+	- You can have three pages of notes with you to the test 
+	- Three 8.5” x 11” sheets of paper
+	- Notes can be on both sides
+	- Can be typed or hand written
+	- The final exam will be similar to the quizzes and test 1
 
 # Review topics
 
