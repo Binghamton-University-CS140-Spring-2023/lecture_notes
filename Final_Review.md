@@ -5,9 +5,7 @@ Final Review
 - **DISCLAIMER:** The material covered here may not include everything you will be tested on for your final exam.
 
 - **Reminder:** Final will be held ***Thursday, May 11th, 12:50 pm - 2:50 pm***
-	- Professor Garrison and I are still deciding if it will be in person or online
-	- If in person, we are booked for ***Lecture Hall 14***
-	- I will send you an email as soon as the decision is made.
+	- The final will be online.
 
 # Review topics
 
