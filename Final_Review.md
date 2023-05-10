@@ -697,7 +697,6 @@ class DogDriver
 
 ## Streams
 
-Suppose we re
 20. What is the output?
 
 ```java
@@ -709,7 +708,14 @@ System.out.println(count);
 21. What is the output?
 
 ```java
-List<Int> intList = Arrays.asList("abc", "", "bcd", "", "defg", "jk");
-long count = strList.stream() .filter(x -> x.isEmpty()) .count();
-System.out.println(count);
+List<Integer> intList = Arrays.asList(1,2,3,1,2,4,5,6,7,1,1,22,9,9,9,9,9,9,9,9,9,9,9,9,9,9);
+
+int result = intList.stream()
+					.limit(12)
+					.distinct()
+					.filter(x -> x % 2 == 1)
+					.map(x -> 3*x)
+					.reduce(0, (a,b)-> a + b);
+					
+System.out.println(result);
 ```
