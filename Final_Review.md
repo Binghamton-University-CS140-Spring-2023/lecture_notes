@@ -474,11 +474,11 @@ class Person
 }
 ```
 
-When writing the code, note here that The XML tags can mean different things depending on the context. For example, <AccessModifier>  is a tag which could be associated with a Field or a Method. Likewise, <NAME> and <TYPE> are tags that could be associated with parameters, fields, or methods.
+When writing the code, note here that The XML tags can mean different things depending on the context. For example, `<AccessModifier>`  is a tag which could be associated with a Field or a Method. Likewise, `<NAME>` and `<TYPE>` are tags that could be associated with parameters, fields, or methods.
 
 In order to properly process the XML and the nested nature of it, what data structure would you utilize here? 
 
-**Note:** When you are done processing say a <FIELD> </FIELD> area, we need to know that we are still within a class here. Describe how the chosen data structure would change when you are changing contexts being considered parsing the XML here. 
+**Note:** When you are done processing say a `<FIELD> </FIELD>` area, we need to know that we are still within a class here. Describe how the chosen data structure would change when you are changing contexts being considered parsing the XML here. 
 
 
 14. Suppose you want to design an app that keeps track of a bunch of user names, and for each user, keeps track of their:
